@@ -1,0 +1,24 @@
+<table border="2">
+
+    <thead>
+        <th>Student Name</th>
+        <th>Email</th>
+        <th>Age</th>
+    </thead>
+
+    {% for student in formdata %}
+
+    <tr>
+        <td> {{student.name}} </td>
+        <td> {{student.email}} </td>
+        <td> {{student.age}} </td>
+        <td> <a href="update/{{student.id}}" id="{{student.id}}">Update</a> </td>
+        <td> <a href="delete/{{student.id}}" id="{{student.id}}">delete</a> </td>
+    </tr>
+
+    {% endfor %}
+
+    
+</table>
+
+<a href="{% url 'createform'%}" target="_blank"> Create a new </a>

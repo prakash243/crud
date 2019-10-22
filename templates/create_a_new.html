@@ -1,0 +1,45 @@
+<form action="" method="POST">
+    
+    {{create_form.as_p}}
+    {% csrf_token %}
+    <input type="submit" name="" id="" value="Create">
+
+    <br> <br> <br>
+</form>
+
+
+
+<div id="contact"></div>
+		<section id="form" class="container">
+
+			<h2>Contact Form</h2>
+			<form id="form" method="POST" action="{% url 'contact' %}">
+                {% csrf_token %}
+				<div class="row gtr-uniform gtr-50">
+					<div class="col-6 col-12-small">
+						<input type="text" name="name" autocomplete="off" id="name" required  value="" placeholder="Name" />
+					</div>
+					<div class="col-6 col-12-small">
+						<input type="email" name="email" autocomplete="off" id="email" required   value="" placeholder="Email" />
+					</div>
+
+					<div class="col-6 col-12-small">
+						<input type="text" name="number" autocomplete="off" id="number" required  value="" placeholder="Phone" />
+					</div>
+
+					<div class="col-6 col-12-small">
+						<input type="text" name="company" autocomplete="off" id="company" required  value="" placeholder="Company" />
+					</div>
+
+					<div class="col-12">
+						<textarea name="message" autocomplete="off" id="message" required placeholder="Enter your message" rows="6"></textarea>
+					</div>
+
+					<div class="col-12">
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" style="background-color:dodgerblue" /></li>
+						</ul>
+					</div>
+				</div>
+			</form>
+		</section>
